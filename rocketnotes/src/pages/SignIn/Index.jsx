@@ -10,9 +10,10 @@ import  { useAuth } from "../../hooks/auth"
 import { useState } from "react"
 
 export function SignIn(){
-  const { signIn } = useAuth()
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
+  
+  const { signIn } = useAuth()
   
   function handleSignIn(){
     signIn({email, password})
